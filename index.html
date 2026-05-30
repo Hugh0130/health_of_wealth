@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>企业财富健康与传承缺口智能自测</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C5A880',
+                            light: '#E2D4BF',
+                            dark: '#9A7E56',
+                        },
+                        navy: {
+                            900: '#0F141C',
+                            800: '#161D28',
+                            700: '#222B3A',
+                            600: '#2E3A4E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#090D14] text-gray-200 min-h-screen flex justify-center items-start antialiased">
+
+    <div class="w-full max-w-[420px] min-h-screen bg-[#0F141C] flex flex-col relative shadow-2xl overflow-x-hidden border-x border-navy-800/50">
+        
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-40 bg-gradient-to-b from-gold/5 to-transparent blur-3xl pointer-events-none"></div>
+
+        <div class="flex-1 flex flex-col justify-between p-6 z-10">
+            
+            <div id="page-cover" class="page-container active flex-1 flex flex-col justify-between py-10">
+                <div class="text-center mt-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 border border-gold/30 rounded-full bg-gold/5 text-gold text-xs tracking-widest mb-6 uppercase">
+                        Splendid Wealth Advisory
+                    </div>
+                    <h1 class="text-3xl font-extrabold text-white tracking-tight leading-snug">
+                        企业财富健康与<br><span class="bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent">传承缺口智能自测</span>
+                    </h1>
+                    <p class="text-gray-400 text-sm mt-4 tracking-wide">
+                        仅需 6 题，1 分钟生成您的专属诊断报告
+                    </p>
+                </div>
+                <div class="my-8 flex justify-center">
+                    <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+                </div>
+                <div class="mb-6">
+                    <button id="btn-start" class="w-full py-4 px-6 bg-gradient-to-r from-gold-dark to-gold text-navy-900 font-bold rounded-xl shadow-lg shadow-gold/10 hover:brightness-110 active:scale-[0.99] transition duration-200 text-center tracking-wider text-base min-h-[48px]">
+                        开始自测
+                    </button>
+                    <p class="text-center text-[11px] text-gray-500 mt-4 leading-relaxed px-4">
+                        * 本系统保障您的信息安全，评估结果基于信托顶层架构逻辑生成
+                    </p>
+                </div>
+            </div>
+
+            <div id="page-q1" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs text-gold font-mono tracking-widest">QUESTION 01/06</span>
+                        <div class="w-24 h-1 bg-navy-800 rounded-full overflow-hidden"><div class="bg-gold h-full w-[16.6%]"></div></div>
+                    </div>
+                    <h2 class="text-lg font-bold text-white mb-2">【资产与债务隔离】</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">您的个人/家庭资产与您当前企业的运营资金、银行贷款之间，是否有明确的法律隔离（如信托资产保护）？</p>
+                    <div class="space-y-3 quiz-options" data-question="q1">
+                        <div data-score="0" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">完全隔离（企业债务由公司承担，完全不会波及我的家庭房产和现金）</p>
+                        </div>
+                        <div data-score="5" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">部分隔离（有一些个人资产独立，但企业贷款有很多是我个人签字联保的）</p>
+                        </div>
+                        <div data-score="10" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">从未隔离（我的家庭主要财富都绑在公司里，或者我用个人名义为公司承担了大量无限担保责任）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 mt-auto flex justify-between gap-4">
+                    <button class="btn-prev py-3 bg-transparent border border-navy-700 text-gray-400 rounded-lg text-sm active:bg-navy-800 transition flex-1">返回</button>
+                    <button class="btn-next py-3 bg-navy-700 text-gray-200 rounded-lg text-sm active:bg-navy-600 transition flex-1">下一步</button>
+                </div>
+            </div>
+
+            <div id="page-q2" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs text-gold font-mono tracking-widest">QUESTION 02/06</span>
+                        <div class="w-24 h-1 bg-navy-800 rounded-full overflow-hidden"><div class="bg-gold h-full w-[33.3%]"></div></div>
+                    </div>
+                    <h2 class="text-lg font-bold text-white mb-2">【控制权与传承风险】</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">万一（仅为假设）创始人发生意外，公司股权将如何处理？</p>
+                    <div class="space-y-3 quiz-options" data-question="q2">
+                        <div data-score="0" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">已设立完善的“家族信托/企业接班人计划”，股权和管理权将自动按规则无缝流转，公司不会瘫痪</p>
+                        </div>
+                        <div data-score="5" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">已经立了遗嘱（Will），但子女尚未进入管理层，可能需要走冗长的法律继承程序（大马一般需数月到数年）</p>
+                        </div>
+                        <div data-score="10" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">没有任何书面规划，子女或合伙人到时可能需要协商，存在争产或股权稀释的风险</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 mt-auto flex justify-between gap-4">
+                    <button class="btn-prev py-3 bg-transparent border border-navy-700 text-gray-400 rounded-lg text-sm active:bg-navy-800 transition flex-1">返回</button>
+                    <button class="btn-next py-3 bg-navy-700 text-gray-200 rounded-lg text-sm active:bg-navy-600 transition flex-1">下一步</button>
+                </div>
+            </div>
+
+            <div id="page-q3" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs text-gold font-mono tracking-widest">QUESTION 03/06</span>
+                        <div class="w-24 h-1 bg-navy-800 rounded-full overflow-hidden"><div class="bg-gold h-full w-[50%]"></div></div>
+                    </div>
+                    <h2 class="text-lg font-bold text-white mb-2">【子女挥霍与财富保全】</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">未来将资产传承给下一代时，您最担心什么？</p>
+                    <div class="space-y-3 quiz-options" data-question="q3">
+                        <div data-score="0" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">子女非常优秀且有传承规划，我完全不担心</p>
+                        </div>
+                        <div data-score="10" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">担心子女一次性拿到巨额财富后缺乏管理能力（挥霍、投资失败，或遭遇婚姻破裂财产被分割）</p>
+                        </div>
+                        <div data-score="5" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">担心子女根本不想接班，导致企业无人管理，资产白白流失</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 mt-auto flex justify-between gap-4">
+                    <button class="btn-prev py-3 bg-transparent border border-navy-700 text-gray-400 rounded-lg text-sm active:bg-navy-800 transition flex-1">返回</button>
+                    <button class="btn-next py-3 bg-navy-700 text-gray-200 rounded-lg text-sm active:bg-navy-600 transition flex-1">下一步</button>
+                </div>
+            </div>
+
+            <div id="page-q4" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs text-gold font-mono tracking-widest">QUESTION 04/06</span>
+                        <div class="w-24 h-1 bg-navy-800 rounded-full overflow-hidden"><div class="bg-gold h-full w-[66.6%]"></div></div>
+                    </div>
+                    <h2 class="text-lg font-bold text-white mb-2">【企业合伙人风险】</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">如果您的企业有多位核心合伙人（Shareholders），是否有机制防止某位合伙人的“个人变故”影响整个公司？</p>
+                    <blockquote class="text-[11px] text-gray-400 border-l-2 border-gold/40 pl-2 mb-4 leading-relaxed bg-navy-800/30 p-2 rounded">
+                        注：如合伙人意外身故导致其股份变为其完全不懂业务的家属所有，或合伙人离婚导致股份被其配偶分割
+                    </blockquote>
+                    <div class="space-y-3 quiz-options" data-question="q4">
+                        <div data-score="0" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">签署了严格的买卖协议（Buy-Sell Agreement）并有信托框架支持，可以自动回购股份</p>
+                        </div>
+                        <div data-score="5" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">只有口头协议或基础的公司章程，并没有针对这些极端情况的法律隔离方案</p>
+                        </div>
+                        <div data-score="10" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">完全没有想过这个问题，合伙人出事会直接波及公司股权结构</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 mt-auto flex justify-between gap-4">
+                    <button class="btn-prev py-3 bg-transparent border border-navy-700 text-gray-400 rounded-lg text-sm active:bg-navy-800 transition flex-1">返回</button>
+                    <button class="btn-next py-3 bg-navy-700 text-gray-200 rounded-lg text-sm active:bg-navy-600 transition flex-1">下一步</button>
+                </div>
+            </div>
+
+            <div id="page-q5" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs text-gold font-mono tracking-widest">QUESTION 05/06</span>
+                        <div class="w-24 h-1 bg-navy-800 rounded-full overflow-hidden"><div class="bg-gold h-full w-[83.3%]"></div></div>
+                    </div>
+                    <h2 class="text-lg font-bold text-white mb-2">【跨境与全球资产】</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">您名下的财富或企业资产，是否包含大马以外的跨境资产（如海外房产、海外公司、离岸账户等）？</p>
+                    <div class="space-y-3 quiz-options" data-question="q5">
+                        <div data-score="0" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">纯本土资产，没有任何海外配置</p>
+                        </div>
+                        <div data-score="10" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">拥有少量海外资产，但全在个人名下，未做任何跨境税务和离岸法律结构规划</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 mt-auto flex justify-between gap-4">
+                    <button class="btn-prev py-3 bg-transparent border border-navy-700 text-gray-400 rounded-lg text-sm active:bg-navy-800 transition flex-1">返回</button>
+                    <button class="btn-next py-3 bg-navy-700 text-gray-200 rounded-lg text-sm active:bg-navy-600 transition flex-1">下一步</button>
+                </div>
+            </div>
+
+            <div id="page-q6" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs text-gold font-mono tracking-widest">QUESTION 06/06</span>
+                        <div class="w-24 h-1 bg-navy-800 rounded-full overflow-hidden"><div class="bg-gold h-full w-[100%]"></div></div>
+                    </div>
+                    <h2 class="text-lg font-bold text-white mb-2">【市场替代品认知】</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">您目前是否认为“只要立了遗嘱（Will），财富和企业就能安全传给下一代”？</p>
+                    <blockquote class="text-[11px] text-gray-400 border-l-2 border-gold/40 pl-2 mb-4 leading-relaxed bg-navy-800/30 p-2 rounded">
+                        注：此题专门用来破除“替代品威胁”，教育市场
+                    </blockquote>
+                    <div class="space-y-3 quiz-options" data-question="q6">
+                        <div data-score="0" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">知道遗嘱的局限性，遗嘱无法防范企业破产清算，且执行时会被公开并被政府冻结一段时间</p>
+                        </div>
+                        <div data-score="10" class="option-card p-4 bg-navy-800 border border-navy-700 hover:border-gold/50 rounded-xl cursor-pointer transition min-h-[48px] flex items-center">
+                            <p class="text-sm text-gray-300">认为立了遗嘱就万事大吉，不知道遗嘱无法起到“资产隔离”的作用</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 mt-auto flex justify-between gap-4">
+                    <button class="btn-prev py-3 bg-transparent border border-navy-700 text-gray-400 rounded-lg text-sm active:bg-navy-800 transition flex-1">返回</button>
+                    <button class="btn-next py-3 bg-navy-700 text-gray-200 rounded-lg text-sm active:bg-navy-600 transition flex-1">下一步</button>
+                </div>
+            </div>
+
+            <div id="page-info" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="text-center mb-6">
+                        <h2 class="text-2xl font-bold text-white tracking-tight">建立您的专属档案</h2>
+                        <p class="text-gray-400 text-xs mt-2">报告将深度匹配您的企业性质，请填写准确信息</p>
+                    </div>
+                    <form id="infoForm" class="space-y-4 mt-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">您的姓名 <span class="text-gold">*</span></label>
+                            <input type="text" id="username" required class="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition placeholder-gray-600" placeholder="请输入姓名">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">公司名称 <span class="text-gold">*</span></label>
+                            <input type="text" id="company" required class="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition placeholder-gray-600" placeholder="请输入完整的企业公司名称">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">手机号码 <span class="text-gold">*</span></label>
+                            <input type="tel" id="phone" required class="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition placeholder-gray-600" placeholder="例如: 012-3456789">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">电子邮箱 <span class="text-gray-500">(可选)</span></label>
+                            <input type="email" id="email" class="w-full bg-navy-800 border border-navy-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition placeholder-gray-600" placeholder="example@domain.com">
+                        </div>
+                        <button type="submit" class="w-full mt-6 py-4 px-6 bg-gradient-to-r from-gold-dark to-gold text-navy-900 font-bold rounded-xl shadow-lg hover:brightness-110 active:scale-[0.99] transition duration-200 text-center tracking-wider text-sm min-h-[48px]">
+                            查看我的诊断报告
+                        </button>
+                    </form>
+                </div>
+                <div class="pt-4 text-center">
+                    <button id="btn-back-to-q6" type="button" class="py-2 bg-transparent text-gray-500 rounded-lg text-xs hover:text-gray-400 transition">返回修改题目</button>
+                </div>
+            </div>
+
+            <div id="page-report" class="page-container flex-1 flex flex-col justify-between">
+                <div>
+                    <div class="text-center border-b border-navy-800 pb-6 mb-6">
+                        <h2 class="text-xl font-bold text-white tracking-wide">您的财富安全诊断报告</h2>
+                        <p class="text-xs text-gray-400 mt-1" id="report-meta"></p>
+                        <div class="mt-6 inline-flex flex-col items-center justify-center p-4 bg-navy-800/60 border border-navy-700 rounded-2xl min-w-[140px]">
+                            <span class="text-xs text-gray-400 font-medium">评估总分</span>
+                            <span class="text-4xl font-black text-white my-1 font-mono" id="report-score">0 <span class="text-sm font-normal text-gray-500">/ 60</span></span>
+                            <span id="risk-badge" class="px-3 py-0.5 rounded-full text-xs font-bold tracking-wider mt-1"></span>
+                        </div>
+                    </div>
+                    <div id="report-content" class="space-y-6">
+                        </div>
+                </div>
+
+                <div class="pt-8 mt-10 border-t border-navy-800 space-y-3">
+                    <a id="consult-btn" href="#" class="w-full py-4 px-6 bg-gradient-to-r from-gold-dark to-gold text-navy-900 font-bold rounded-xl shadow-lg hover:brightness-110 active:scale-[0.99] transition duration-200 flex justify-center items-center tracking-wider text-sm min-h-[48px]">
+                        预约 Splendid 专属顾问
+                    </a>
+                    <button id="btn-reset" class="w-full py-3 bg-navy-800 border border-navy-700 text-gray-400 rounded-xl text-sm hover:text-white active:bg-navy-700 transition">
+                        重新测试
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

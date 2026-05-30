@@ -1,0 +1,33 @@
+/* 清除移动端高亮反色 */
+body {
+    -webkit-tap-highlight-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 隐藏所有多步卡片，仅通过 active 类名控制显示 */
+.page-container {
+    display: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.page-container.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 自定义选中的大按钮单选块样式 */
+.option-card.selected {
+    border-color: #C5A880 !important; /* gold */
+    background-color: #222B3A !important; /* navy-700 */
+}
+.option-card.selected p {
+    color: #FFFFFF !important;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
